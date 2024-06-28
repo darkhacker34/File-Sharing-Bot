@@ -139,6 +139,11 @@ async def not_joined(client: Client, message: Message):
     except IndexError:
         pass
 
+    start_sticker = await message.reply.sticker("CAACAgIAAxkBAAEL13JmDbrT5EOQeZKbY1gUdMmH_yPkrgACVQADr8ZRGmTn_PAl6RC_NAQ")
+
+    await asyncio.sleep(1)
+    await start_sticker.delete()
+
     await message.reply(
         text = FORCE_MSG.format(
                 first = message.from_user.first_name,
