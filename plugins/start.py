@@ -141,7 +141,7 @@ async def not_joined(client: Client, message: Message):
 
     start_sticker = await message.reply.sticker("CAACAgIAAxkBAAEL13JmDbrT5EOQeZKbY1gUdMmH_yPkrgACVQADr8ZRGmTn_PAl6RC_NAQ")
 
-    await asyncio.sleep(1)
+    await asyncio.sleep(4)
     await start_sticker.delete()
 
     await message.reply(
